@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/web/teachadmin/alloc'
+let g:netrw_dirhist_2='/tmp_amd/reed/export/reed/6/teachadmin/public_html/alloc'
+let g:netrw_dirhist_3='/tmp_amd/reed/export/reed/6/teachadmin/public_html/alloc/public_html'
+let g:netrw_dirhist_4='/tmp_amd/reed/export/reed/6/teachadmin/public_html/alloc'
+let g:netrw_dirhist_5='/tmp_amd/reed/export/reed/6/teachadmin/public_html'
+let g:netrw_dirhist_6='/tmp_amd/cage/export/cage/5/z5281664'
