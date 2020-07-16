@@ -26,6 +26,7 @@ Plug 'vim-utils/vim-man'
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
