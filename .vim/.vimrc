@@ -15,6 +15,9 @@ set incsearch
 set noshowmode
 
 imap jk <Esc>
+"Tab quick switch map
+nnoremap tj :tabprevious<CR>
+nnoremap tk :tabnext<CR>
 
 "set colorcolumn=80
 "highlight colorcolumn ctermbg=white
