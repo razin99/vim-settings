@@ -1,3 +1,5 @@
+> This setup works well with nvim, probably would work OK on vim too, but untested
+
 # Current Vim settings used
 
 ## Plugins
