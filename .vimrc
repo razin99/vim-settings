@@ -6,8 +6,10 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set number relativenumber
-set smartcase
+set hidden
 set nobackup
+set noswapfile
+set smartcase
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
@@ -55,7 +57,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 " -- EMMET
 Plug 'mattn/emmet-vim'
 
-" -- Language server
+"" -- Language server
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " -- MISC
@@ -117,7 +119,11 @@ let g:gitgutter_sign_modified_removed = '-'
 " ---- COC keybinds ---- "
 
 " enter to select completion
-inoremap <silent><expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+" if item on list selected, autocomplete. else do coc#on_enter thingy
+inoremap <silent><expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" previous way of doing this made coc-pairs remove auto indentation, this one
+" works but im not 100% sure why
+
 
 " trigger completion
 inoremap <silent><expr> <c-space> coc#refresh()
@@ -143,4 +149,7 @@ endfunction
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
 
